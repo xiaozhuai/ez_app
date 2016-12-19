@@ -14,9 +14,9 @@ EZ()->init(__DIR__);
 $smarty = new Smarty();
 //set some argument for smarty, the "__DIR__/smarty" dir should be writeable,
 //for more about smarty, visit http://www.smarty.net/
-$smarty->setCompileDir(__DIR__ . "/smarty/compile");
-$smarty->setConfigDir(__DIR__ . "/smarty/conf");
-$smarty->setCacheDir(__DIR__ . "/smarty/cache");
+$smarty->setCompileDir(__DIR__ . "/smarty_files/compile");
+$smarty->setConfigDir(__DIR__ . "/smarty_files/conf");
+$smarty->setCacheDir(__DIR__ . "/smarty_files/cache");
 
 EZ()->viewEngine($smarty);
 
