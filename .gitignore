@@ -1,3 +1,5 @@
 .idea
 smarty_files
 twig_files
+haml_php_files
+haml_twig_files
