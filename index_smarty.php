@@ -20,7 +20,7 @@ $smarty->setCacheDir(__DIR__ . "/smarty/cache");
 
 EZ()->viewEngine($smarty);
 
-EZ()->errView(__DIR__ . "/views_smarty/err.tpl");
+//EZ()->errView(__DIR__ . "/views_smarty/err.tpl");
 
 EZ()->config(
     include __DIR__ . "/conf/main.config.php",
