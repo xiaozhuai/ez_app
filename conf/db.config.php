@@ -6,8 +6,7 @@
  * Time: 下午7:21
  */
 return array(
-    "DB_HOST"                         => "127.0.0.1",
-    "DB_PORT"                         => "3306",
+    "DB_DSN"                          => "mysql:host=localhost;port=3306;dbname=ez_pdo",
     "DB_USER"                         => "root",
     "DB_PWD"                          => "root"
 );
