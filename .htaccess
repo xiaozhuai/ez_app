@@ -1,0 +1,6 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	#ignore if it's a file
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule .* index_smarty.php
+</IfModule>
