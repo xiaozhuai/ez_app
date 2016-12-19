@@ -2,5 +2,5 @@
 	RewriteEngine On
 	#ignore if it's a file
     RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule .* index_haml_twig.php
+    RewriteRule .* index.php
 </IfModule>
