@@ -17,8 +17,8 @@ Twig_Autoloader::register();
 //cause twig cannot use static file path, so set views root dir for twig to use relative path
 EZGlobal()->TWIG_FILESYSTEM = __DIR__ . "/views_twig";
 
-//set some argument for twig, the "__DIR__/twig" dir should be writeable,
-//for more about twig, visit http://twig.sensiolabs.org/
+//set some argument for twig, the "__DIR__/twig_files" dir should be writeable,
+//for more infomation, visit http://twig.sensiolabs.org/
 $loader = new Twig_Loader_Filesystem(EZGlobal()->TWIG_FILESYSTEM);
 $twig = new Twig_Environment($loader, array(
     'cache' => __DIR__ . "/twig_files",

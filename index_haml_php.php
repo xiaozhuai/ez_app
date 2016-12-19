@@ -16,7 +16,7 @@ EZ()->init(__DIR__);
 
 $haml = new MtHaml\Environment('php');
 //set some argument for haml with php, the "__DIR__/haml_php_files" dir should be writeable,
-//for more about smarty, visit https://github.com/arnaud-lb/MtHaml
+//for more infomation, visit https://github.com/arnaud-lb/MtHaml
 $hamlPhp = new MtHaml\Support\Php\Executor($haml, array(
     'cache' => __DIR__ . "/haml_php_files",
 ));

@@ -21,8 +21,8 @@ EZ()->init(__DIR__);
 //cause twig cannot use static file path, so set views root dir for twig to use relative path
 EZGlobal()->TWIG_FILESYSTEM = __DIR__ . "/views_haml_twig";
 
-//set some argument for twig, the "__DIR__/twig" dir should be writeable,
-//for more about twig, visit http://twig.sensiolabs.org/
+//set some argument for twig, the "__DIR__/haml_twig_files" dir should be writeable,
+//for more infomation, visit https://github.com/arnaud-lb/MtHaml
 $loader = new Twig_Loader_Filesystem(EZGlobal()->TWIG_FILESYSTEM);
 $hamlTwig = new Twig_Environment($loader, array(
     'cache' => __DIR__ . "/haml_twig_files",
