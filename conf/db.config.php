@@ -6,7 +6,8 @@
  * Time: 下午7:21
  */
 return array(
-    "DB_DSN"                          => "mysql:host=localhost;port=3306;dbname=ez_pdo",
+//    "DB_DSN"                          => "mysql:host=localhost;port=3306;dbname=ez_pdo",
+    "DB_DSN"                          => "sqlite:/Users/xiaozhuai/Desktop/ez_pdo_sqlite.db",
     "DB_USER"                         => "root",
     "DB_PWD"                          => "root",
     "DB_OPTIONS"                      => array(
