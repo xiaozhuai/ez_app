@@ -12,9 +12,11 @@ class IndexController extends EZController
         $this->getView()->name = "EZer";
         $this->getView()->view_engine = EZConfig()->VIEW_ENGINE;
         $this->getView()->render();
-//        EZ()->loadModel("/Index");
-//        $model = new IndexModel();
-//        $model->test();
+
+        //create a table named 'PKU' ,id int auto_increment, name varchar(256), and uncomment these line to test EZSql
+        //EZ()->loadModel("/Index");
+        //$model = new IndexModel();
+        //$model->test();
     }
 
 }

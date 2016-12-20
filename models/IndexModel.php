@@ -23,19 +23,13 @@ class IndexModel extends EZSql
         echo "<br><hr><br>";
         var_dump($this->insert(
             [
-                "name" => "aaa'"
+                "name" => "spcial char{ \\'\"()[]/%&_ }"
             ]
         ));
         echo "<br><hr><br>";
         var_dump($this->insert(
             [
-                "name" => "aaa\""
-            ]
-        ));
-        echo "<br><hr><br>";
-        var_dump($this->insert(
-            [
-                "name" => "bbb\\"
+                "name" => "bbb"
             ]
         ));
         echo "<br><hr><br>";
@@ -45,7 +39,7 @@ class IndexModel extends EZSql
             ]
         ));
         echo "<br><hr><br>";
-        var_dump($this->getAll());
+        var_dump($this->getAllRows());
         echo "<br><hr><br>";
         var_dump($this->update(
             [
@@ -54,11 +48,11 @@ class IndexModel extends EZSql
             sprintf("`name`='ccc'")
         ));
         echo "<br><hr><br>";
-        var_dump($this->getAll());
+        var_dump($this->getAllRows());
         echo "<br><hr><br>";
         var_dump($this->del(sprintf("`name`='aaa'")));
         echo "<br><hr><br>";
-        var_dump($this->getAll());
+        var_dump($this->getAllRows());
         echo "<br><hr><br>";
         var_dump($this->getOneRow());
         echo "<br><hr><br>";
