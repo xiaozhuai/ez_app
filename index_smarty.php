@@ -12,7 +12,7 @@ require_once __DIR__ . "/vendor/ez/autoload.php";
 EZ()->init(__DIR__);
 
 $smarty = new Smarty();
-//set some argument for smarty, the "__DIR__/smarty_files" dir should be writeable,
+//set some argument for smarty, the "__DIR__/cache/smarty" dir should be writeable,
 //for more infomation, visit http://www.smarty.net/
 $smarty->setCompileDir(__DIR__ . "/cache/smarty/compile");
 $smarty->setConfigDir(__DIR__ . "/cache/smarty/conf");

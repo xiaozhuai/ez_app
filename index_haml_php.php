@@ -15,7 +15,7 @@ MtHaml\Autoloader::register();
 EZ()->init(__DIR__);
 
 $haml = new MtHaml\Environment('php');
-//set some argument for haml with php, the "__DIR__/haml_php_files" dir should be writeable,
+//set some argument for haml with php, the "__DIR__/cache/haml_php" dir should be writeable,
 //for more infomation, visit https://github.com/arnaud-lb/MtHaml
 $hamlPhp = new MtHaml\Support\Php\Executor($haml, array(
     'cache' => __DIR__ . "/cache/haml_php",
