@@ -12,8 +12,6 @@ EZ()->session(true);        //if enable session support
 
 EZ()->init(__DIR__);        //init framework in cur dir
 
-EZ()->errView(__DIR__ . "/views_php/err.phtml");        //define the err page view tpl
-
 EZ()->config(                                           //load configs
     include __DIR__ . "/conf/main.config.php",
     include __DIR__ . "/conf/db.config.php",
