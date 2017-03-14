@@ -2,5 +2,5 @@
 	RewriteEngine On
 	#ignore if it's a file
     RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule .* index.php
+    RewriteRule .* index_php_markdown.php
 </IfModule>

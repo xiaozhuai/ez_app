@@ -6,17 +6,17 @@
  * Time: 上午11:36
  */
 
-require_once "/Users/xiaozhuai/work/smarty-3.1.30/libs/Smarty.class.php";
-require_once "/Users/xiaozhuai/work/ez/autoload.php";
+require_once __DIR__ . "/vendor/smarty/libs/Smarty.class.php";
+require_once __DIR__ . "/vendor/ez/autoload.php";
 
 EZ()->init(__DIR__);
 
 $smarty = new Smarty();
 //set some argument for smarty, the "__DIR__/smarty_files" dir should be writeable,
 //for more infomation, visit http://www.smarty.net/
-$smarty->setCompileDir(__DIR__ . "/smarty_files/compile");
-$smarty->setConfigDir(__DIR__ . "/smarty_files/conf");
-$smarty->setCacheDir(__DIR__ . "/smarty_files/cache");
+$smarty->setCompileDir(__DIR__ . "/cache/smarty/compile");
+$smarty->setConfigDir(__DIR__ . "/cache/smarty/conf");
+$smarty->setCacheDir(__DIR__ . "/cache/smarty/cache");
 
 EZ()->viewEngine($smarty);
 
@@ -35,7 +35,5 @@ EZ()->mvc(
 );
 
 EZ()->library(__DIR__ . "/lib");
-
-EZ()->tool(__DIR__ . "/tool");
 
 EZ()->run();

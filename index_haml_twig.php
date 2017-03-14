@@ -6,9 +6,9 @@
  * Time: 上午11:36
  */
 
-require_once "/Users/xiaozhuai/work/Twig-1.29.0/lib/Twig/Autoloader.php";
-require_once "/Users/xiaozhuai/work/MtHaml-master/lib/MtHaml/Autoloader.php";
-require_once "/Users/xiaozhuai/work/ez/autoload.php";
+require_once __DIR__ . "/vendor/twig/lib/Twig/Autoloader.php";
+require_once __DIR__ . "/vendor/haml/lib/MtHaml/Autoloader.php";
+require_once __DIR__ . "/vendor/ez/autoload.php";
 
 //register twig view engine
 Twig_Autoloader::register();
@@ -25,7 +25,7 @@ EZGlobal()->TWIG_FILESYSTEM = __DIR__ . "/views_haml_twig";
 //for more infomation, visit https://github.com/arnaud-lb/MtHaml
 $loader = new Twig_Loader_Filesystem(EZGlobal()->TWIG_FILESYSTEM);
 $hamlTwig = new Twig_Environment($loader, array(
-    'cache' => __DIR__ . "/haml_twig_files",
+    'cache' => __DIR__ . "/cache/haml_twig",
 ));
 
 $haml = new MtHaml\Environment('twig', array('enable_escaper' => false));
@@ -55,7 +55,5 @@ EZ()->mvc(
 );
 
 EZ()->library(__DIR__ . "/lib");
-
-EZ()->tool(__DIR__ . "/tool");
 
 EZ()->run();

@@ -6,8 +6,8 @@
  * Time: 上午11:36
  */
 
-require_once "/Users/xiaozhuai/work/MtHaml-master/lib/MtHaml/Autoloader.php";
-require_once "/Users/xiaozhuai/work/ez/autoload.php";
+require_once __DIR__ . "/vendor/haml/lib/MtHaml/Autoloader.php";
+require_once __DIR__ . "/vendor/ez/autoload.php";
 
 //register haml view engine
 MtHaml\Autoloader::register();
@@ -18,7 +18,7 @@ $haml = new MtHaml\Environment('php');
 //set some argument for haml with php, the "__DIR__/haml_php_files" dir should be writeable,
 //for more infomation, visit https://github.com/arnaud-lb/MtHaml
 $hamlPhp = new MtHaml\Support\Php\Executor($haml, array(
-    'cache' => __DIR__ . "/haml_php_files",
+    'cache' => __DIR__ . "/cache/haml_php",
 ));
 
 EZ()->viewEngine($hamlPhp);
@@ -38,7 +38,5 @@ EZ()->mvc(
 );
 
 EZ()->library(__DIR__ . "/lib");
-
-EZ()->tool(__DIR__ . "/tool");
 
 EZ()->run();

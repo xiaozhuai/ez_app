@@ -6,8 +6,8 @@
  * Time: 上午11:36
  */
 
-require_once "/Users/xiaozhuai/work/Twig-1.29.0/lib/Twig/Autoloader.php";
-require_once "/Users/xiaozhuai/work/ez/autoload.php";
+require_once __DIR__ . "/vendor/twig/lib/Twig/Autoloader.php";
+require_once __DIR__ . "/vendor/ez/autoload.php";
 
 EZ()->init(__DIR__);
 
@@ -21,7 +21,7 @@ EZGlobal()->TWIG_FILESYSTEM = __DIR__ . "/views_twig";
 //for more infomation, visit http://twig.sensiolabs.org/
 $loader = new Twig_Loader_Filesystem(EZGlobal()->TWIG_FILESYSTEM);
 $twig = new Twig_Environment($loader, array(
-    'cache' => __DIR__ . "/twig_files",
+    'cache' => __DIR__ . "/cache/twig",
 ));
 
 EZ()->viewEngine($twig);
@@ -41,7 +41,5 @@ EZ()->mvc(
 );
 
 EZ()->library(__DIR__ . "/lib");
-
-EZ()->tool(__DIR__ . "/tool");
 
 EZ()->run();
