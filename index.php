@@ -26,6 +26,8 @@ EZ()->mvc(                                              //define the mvc path
     __DIR__ . "/controllers"
 );
 
+EZ()->routeRules(include __DIR__ . "/conf/route.config.php");
+
 EZ()->library(__DIR__ . "/lib");                        //define the user class lib, will be automatically included
 
 
